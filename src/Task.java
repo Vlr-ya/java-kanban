@@ -10,7 +10,16 @@ public class Task {
     private TaskStatus status;
     private final int id;
 
-    public Task (String name, String description, int id) {
+    public Task(String name, String description, int id) {
+
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Empty task name");
+        } else if (description == null || description.isBlank()) {
+            throw new IllegalArgumentException("Empty task description");
+        } else if (id < 1) {
+            throw new IllegalArgumentException("Incorrect task id: " + id);
+        }
+
         this.name = name;
         this.description = description;
         this.id = id;
