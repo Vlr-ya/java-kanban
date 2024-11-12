@@ -10,7 +10,7 @@ public class Task {
     private TaskStatus status;
     private final int id;
 
-    public Task (String name, String description, int id) {
+    public Task(String name, String description, int id) {
 
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Empty task name");
