@@ -205,7 +205,7 @@ class InMemoryTaskManager implements TaskManager {
                 boolean statusNew = false;
                 boolean statusInProgress = false;
                 boolean statusDone = false;
-                for (Subtask subtask : subtasks ) {
+                for (Subtask subtask : subtasks) {
                     switch (subtask.getStatus()) {
                         case NEW:
                             statusNew = true;
