@@ -7,6 +7,9 @@ public class Subtask extends Task {
 
     public Subtask(String name, String description, int id, Epic epic) {
         super(name, description, id);
+        if (epic == null) {
+            throw new IllegalArgumentException("Empty subtask epic");
+        }
         this.epic = epic;
     }
 
